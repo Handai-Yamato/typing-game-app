@@ -1,1 +1,2 @@
-# typing-game-app with JavaScript（スマホ非対応）
+# typing-game-app with JavaScript
+※スマホ非対応
