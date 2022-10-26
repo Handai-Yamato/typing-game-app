@@ -9,8 +9,9 @@ const correctSound = new Audio("./audio/correct.mp3");
 // inputテキスト入力が合っているかどうかの判定
 typeInput.addEventListener("input", () => {
   //タイピング音をつける
+  typeSound.volume = 0.3;
   typeSound.play();
-  typeSound.currentTime = 0.2;
+  typeSound.currentTime = 0;
 
   //inputされるたびに関数を実行
   const sentenceArray = typeDisplay.querySelectorAll("span"); //spanタグの文字をすべて取得
@@ -23,7 +24,7 @@ typeInput.addEventListener("input", () => {
       //inputに文字が入力されていなければ
       characterSpan.classList.remove("correct");
       characterSpan.classList.remove("incorrect");
-      correct = false; //間違えるとpfalseになる
+      correct = false; //間違えるとfalseになる
     } else if (characterSpan.innerText == arrayValue[index]) {
       //spanタグの中身とテキストボックスの中身が同じならば
       characterSpan.classList.add("correct"); // correctクラスを追加
@@ -32,7 +33,7 @@ typeInput.addEventListener("input", () => {
       //タイピングミスした場合
       characterSpan.classList.add("incorrect");
       characterSpan.classList.remove("correct");
-      wrongSound.volume = 0.3;
+      wrongSound.volume = 0.1;
       wrongSound.play();
       wrongSound.currentTime = 0;
       correct = false;
@@ -57,7 +58,7 @@ function GetRandomSentence() {
 // ランダムな文章を取得して、表示する
 async function RenderNextSentence() {
   const sentence = await GetRandomSentence();
-    console.log(sentence);
+  console.log(sentence);
 
   typeDisplay.innerText = "";
 

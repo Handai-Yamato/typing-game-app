@@ -9,6 +9,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     overflow: hidden;
     background: linear-gradient(to left top, rgb(112, 109, 109), rgb(50, 50, 60));
     font-family: "Poppins", sans-serif;
@@ -31,8 +32,6 @@ body {
 }
 
 .timer {
-    position: absolute;
-    top: 2rem;
     font-size: 5rem;
     font-weight: 500;
     color: rgb(240, 240, 240);
