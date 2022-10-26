@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Zen+Antique&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(to left top, rgb(112, 109, 109), rgb(50, 50, 60));
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background-color: rgba(222, 233, 240, 0.498);
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    max-width: 1000px;
+    width: 90%;
+    min-height: 600px;
+}
+
+.container .typeInput {
+    margin-top: 4rem;
+    font-size: 3rem;
+}
+
+.timer {
+    position: absolute;
+    top: 2rem;
+    font-size: 5rem;
+    font-weight: 500;
+    color: rgb(240, 240, 240);
+}
+
+.type-display {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.type-Input {
+    width: 100%;
+    height: 14rem;
+    margin: auto;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(rgb(207, 189, 189), rgb(163, 172, 163), rgb(143, 143, 210));
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    background: transparent;
+    outline: none;
+    resize: none;
+}
+
+.type-Input:focus {
+    border-color: black;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+    text-decoration: underline;
+}
